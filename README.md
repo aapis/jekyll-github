@@ -7,6 +7,7 @@ Still in progress!
 TODO:
 * Built in CSS
 * More data options (user, stars, followers, etc)
+* A short/truncated list for displaying "recent project" type lists
 
 ## Installation
 
