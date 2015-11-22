@@ -1,7 +1,7 @@
 require 'octokit'
 require 'notifaction'
 
-class Github
+class GithubClient
   attr_reader :client, :endpoint, :repo_location
 
   def initialize(user_repo = nil)
@@ -16,5 +16,9 @@ class Github
 
   def repos
     @client.repositories(@client.login, { type: :public })
+  end
+
+  def user
+    @client.login
   end
 end
