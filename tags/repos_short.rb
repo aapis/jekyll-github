@@ -13,7 +13,7 @@ module Jekyll
 
         html << "<ul class=\"gh-short-repo\">"
         user_repos.each do |repo|
-          html << "<li><a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
+          html << "<li><i class=\"devicon-#{repo.language.downcase}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
         end
         html << "</ul>"
 

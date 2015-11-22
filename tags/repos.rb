@@ -13,8 +13,7 @@ module Jekyll
         user_repos.each do |repo|
           html << "<article class=\"gh-repo\">"
             html << "<div class=\"gh-repo-header\">"
-              html << "<i class=\"#{repo.language.downcase}\"></i>"
-              html << "<h2><a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
+              html << "<h2><i class=\"devicon-#{repo.language.downcase}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
               html << "<p>#{repo.description}</p>"
               html << "<ul>"
                 html << "<li>#{repo.watchers_count} watcher(s) and #{repo.stargazers_count} stargazer(s)</li>"
