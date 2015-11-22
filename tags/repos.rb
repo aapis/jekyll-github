@@ -17,7 +17,7 @@ module Jekyll
               html << "<h2><a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
               html << "<p>#{repo.description}</p>"
               html << "<ul>"
-                html << "<li>#{repo.watchers_count} watchers and #{repo.stargazers_count} stargazers</li>"
+                html << "<li>#{repo.watchers_count} watcher(s) and #{repo.stargazers_count} stargazer(s)</li>"
 
                 if repo.open_issues_count == 1
                   html << "<li><a href=\"#{repo.html_url}/issues\">#{repo.open_issues_count} Issue</a></li>"
