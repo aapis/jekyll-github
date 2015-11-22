@@ -11,8 +11,8 @@ TODO:
 
 1. Extract the zip file contents to `YOUR_SITE_DIR/_plugins`
 2. Run `bundle install` inside `YOUR_SITE_DIR/_plugins/jekyll-github`
-3. Add one of the shortcodes to the page and run `jekyll serve`
-4. You're done.
+3. Get an API key from Github and set them in your bash profile as `GITHUB_TOKEN_USER` and `GITHUB_TOKEN_PASS`
+4. Add one of the shortcodes to the page and run `jekyll serve`
 
 ## Usage
 
