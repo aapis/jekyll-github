@@ -16,6 +16,6 @@ TODO:
 
 ## Usage
 
-Add any of the following Liquid tags to your site's pages:
+[Add](http://jekyllrb.com/docs/plugins/#tags) any of the following Liquid tags to your site's pages:
 * github_repos
 * github_user
