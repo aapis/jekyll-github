@@ -13,3 +13,9 @@ TODO:
 1. Extract the zip file contents to `YOUR_SITE_DIR/_plugins`
 2. Run `bundle install` inside `YOUR_SITE_DIR/_plugins/jekyll-github`
 3. You're done.
+
+## Usage
+
+Add any of the following Liquid tags to your site's pages:
+* github_repos
+* github_user
