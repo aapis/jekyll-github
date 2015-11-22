@@ -6,12 +6,12 @@ module Jekyll
       end
 
       def render(context)
-        github = ::GithubClient.new(limit: 5)
+        github = GithubClient.new(limit: 5)
         html = []
 
         user_repos = github.repos_short
 
-        html << "<ul>"
+        html << "<ul class=\"gh-short-repo\">"
         user_repos.each do |repo|
           html << "<li><a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
         end

@@ -6,12 +6,11 @@ module Jekyll
       end
 
       def render(context)
-        github = ::GithubClient.new
+        github = GithubClient.new
         user = github.user
         html = []
 
-        puts user.inspect
-        html << "<section class=\"user\">"
+        html << "<section class=\"gh-user\">"
           html << "<h2><a href=\"#{user.html_url}\">#{user.login}</a></h2>"
           html << "<ul>"
             html << "<li class=\"company\">Works for #{user.company}</a></li>" if user.company
