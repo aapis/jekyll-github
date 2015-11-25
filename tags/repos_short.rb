@@ -14,7 +14,7 @@ module Jekyll
         user_repos.each do |repo|
           lang = if repo.language.nil? then 'github' else repo.language.downcase end
 
-          html << "<li><i class=\"devicon-#{lang}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
+          html << "<li><i class=\"devicon-#{lang}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description.gsub(/<\/?[^>]*>/, "")}</li>"
         end
         html << "</ul>"
 

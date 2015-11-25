@@ -16,7 +16,7 @@ module Jekyll
           html << "<article class=\"gh-repo\">"
             html << "<div class=\"gh-repo-header\">"
               html << "<h2><i class=\"devicon-#{lang}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
-              html << "<p>#{repo.description}</p>"
+              html << "<p>#{repo.description.gsub(/<\/?[^>]*>/, "")}</p>"
               html << "<ul>"
                 html << "<li>#{repo.watchers_count} watcher(s) and #{repo.stargazers_count} stargazer(s)</li>"
 
