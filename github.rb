@@ -25,4 +25,11 @@ class GithubClient
   def user
     @client.user(@client.login)
   end
+
+  def public_contributions
+    x = @client.user_public_events(@client.login, limit: 300)
+    x.each do |event|
+      puts event[:type]
+    end
+  end
 end

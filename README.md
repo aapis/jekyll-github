@@ -20,3 +20,4 @@ TODO:
 * repos
 * repos_short
 * user
+* public_contributions
