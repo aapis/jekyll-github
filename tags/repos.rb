@@ -21,9 +21,9 @@ module Jekyll
                 html << "<li>#{repo.watchers_count} watcher(s) and #{repo.stargazers_count} stargazer(s)</li>"
 
                 if repo.open_issues_count == 1
-                  html << "<li><a href=\"#{repo.html_url}/issues\">#{repo.open_issues_count} Issue</a></li>"
+                  html << "<li><a href=\"#{repo.html_url}/issues\" target=\"_blank\">#{repo.open_issues_count} Issue</a></li>"
                 elsif repo.open_issues_count > 1
-                  html << "<li><a href=\"#{repo.html_url}/issues\">#{repo.open_issues_count} Issues</a></li>"
+                  html << "<li><a href=\"#{repo.html_url}/issues\" target=\"_blank\">#{repo.open_issues_count} Issues</a></li>"
                 end
 
               html << "</ul>"
