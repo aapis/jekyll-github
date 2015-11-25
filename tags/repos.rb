@@ -8,12 +8,14 @@ module Jekyll
       def render(context)
         github = GithubClient.new
         html = []
-
         user_repos = github.repos
+
         user_repos.each do |repo|
+          lang = if repo.language.nil? then 'github' else repo.language.downcase end
+
           html << "<article class=\"gh-repo\">"
             html << "<div class=\"gh-repo-header\">"
-              html << "<h2><i class=\"devicon-#{repo.language.downcase}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
+              html << "<h2><i class=\"devicon-#{lang}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a></h2>"
               html << "<p>#{repo.description}</p>"
               html << "<ul>"
                 html << "<li>#{repo.watchers_count} watcher(s) and #{repo.stargazers_count} stargazer(s)</li>"

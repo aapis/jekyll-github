@@ -6,14 +6,15 @@ module Jekyll
       end
 
       def render(context)
-        github = GithubClient.new(limit: 5)
+        github = GithubClient.new(limit: 4)
         html = []
-
         user_repos = github.repos_short
 
         html << "<ul class=\"gh-short-repo\">"
         user_repos.each do |repo|
-          html << "<li><i class=\"devicon-#{repo.language.downcase}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
+          lang = if repo.language.nil? then 'github' else repo.language.downcase end
+
+          html << "<li><i class=\"devicon-#{lang}-plain colored\"></i> <a href=\"#{repo.html_url}\" target=\"_blank\">#{repo.name}</a> - #{repo.description}</li>"
         end
         html << "</ul>"
 

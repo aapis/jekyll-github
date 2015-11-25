@@ -15,7 +15,7 @@ class GithubClient
   end
 
   def repos
-    @client.repositories(@client.login, { visibility: :public })
+    @client.repositories(@client.login, visibility: :public, sort: :updated)
   end
 
   def repos_short
